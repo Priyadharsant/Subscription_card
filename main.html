@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style>
+        .body{
+            display: flex;
+            flex-direction: column ;
+            align-content: space-between;
+            align-items: center ;
+            gap : 30px;
+        }
+        .body div{
+            min-width: 290px;
+            display : inline-flex ;
+            flex-direction: column ;
+            box-shadow : 0 0 10px gray;
+            border-radius : 10px ;
+            align-items: center ;
+            transition :transform ease-in-out 0.3s ;
+            animation: fadein 1s ease-in-out,slide 0.8s ease-in-out;
+        }
+        h1{
+            color: #408cff;
+            text-align :center ;
+            animation: fadein 0.7s ease-in-out,slide 0.7s ease-in-out;
+        }
+        h1::after {
+    content: ' 👑';
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+        h2{
+            color: #ff000a;
+        }
+        p::before{
+            content: '🔹';
+        }
+        h3{
+            padding:5px 15px 5px 15px ;    
+            background: linear-gradient(to bottom,#ff0a00,#ff001f88,#ff001f);
+            border-radius: 10px;
+            box-shadow : 0 0 5px #ff001f;
+            transition :transform ease-in-out 0.3s ;
+            border: 2px solid #ff000ac3;
+            animation: fadein 1.1s ease-in-out,slide 0.9s ease-in-out;
+        }
+        h3:hover,.body div:hover{
+            transform : scale(1.1);
+        }
+        
+        @media (min-width: 600px) {
+        
+            .body {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+           }
+           
+      }
+      @keyframes fadein {
+      from{
+          opacity: 0;
+      }
+      to{
+          opacity: 1;
+      }
+          
+      }
+      @keyframes slide {
+          from{
+              transform: translateY(-100px);
+          }
+          to{
+              transform: translateY(0px);
+          }
+          
+      }
+
+    </style>
+</head>
+<body>
+    <h1>Subscription</h1>
+    <div class="body">
+    <div>
+        <h2>Silver </h2>
+        <p>100.Rs</p>
+        <p>1 month </p>
+        <p>1Gb storage</p>
+        <h3>Get</h3>
+    </div>
+    <div>
+        <h2>Gold</h2>
+        <p>500.Rs</p>
+        <p>6 month </p>
+        <p>10Gb storage</p>
+        <h3>Get</h3>
+    </div>
+    <div>
+        <h2>Diamond </h2>
+        <p>1000.Rs</p>
+        <p>1 Year</p>
+        <p>100Gb storage</p>
+        <h3>Get</h3>
+    </div>
+    </div>
+</body>
+</html>
